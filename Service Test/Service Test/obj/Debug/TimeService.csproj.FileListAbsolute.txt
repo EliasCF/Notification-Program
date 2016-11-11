@@ -1,0 +1,8 @@
+C:\Users\elia0313\documents\visual studio 2015\Projects\Service Test\Service Test\bin\Debug\Service Test.exe.config
+C:\Users\elia0313\documents\visual studio 2015\Projects\Service Test\Service Test\obj\Debug\Service Test.exe
+C:\Users\elia0313\documents\visual studio 2015\Projects\Service Test\Service Test\obj\Debug\Service Test.pdb
+C:\Users\elia0313\documents\visual studio 2015\Projects\Service Test\Service Test\bin\Debug\Service Test.exe
+C:\Users\elia0313\documents\visual studio 2015\Projects\Service Test\Service Test\bin\Debug\Service Test.pdb
+C:\Users\elia0313\documents\visual studio 2015\Projects\Service Test\Service Test\obj\Debug\TimeService.csprojResolveAssemblyReference.cache
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Service Test\Service Test\obj\Debug\Service_Test.Properties.Resources.resources
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Service Test\Service Test\obj\Debug\TimeService.csproj.GenerateResource.Cache

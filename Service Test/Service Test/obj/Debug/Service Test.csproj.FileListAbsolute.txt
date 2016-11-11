@@ -1,0 +1,6 @@
+c:\users\elia0313\documents\visual studio 2015\Projects\Service Test\Service Test\bin\Debug\Service Test.exe.config
+c:\users\elia0313\documents\visual studio 2015\Projects\Service Test\Service Test\bin\Debug\Service Test.exe
+c:\users\elia0313\documents\visual studio 2015\Projects\Service Test\Service Test\bin\Debug\Service Test.pdb
+c:\users\elia0313\documents\visual studio 2015\Projects\Service Test\Service Test\obj\Debug\Service Test.csprojResolveAssemblyReference.cache
+c:\users\elia0313\documents\visual studio 2015\Projects\Service Test\Service Test\obj\Debug\Service Test.exe
+c:\users\elia0313\documents\visual studio 2015\Projects\Service Test\Service Test\obj\Debug\Service Test.pdb

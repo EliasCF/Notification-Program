@@ -1,0 +1,9 @@
+c:\users\elia0313\documents\visual studio 2015\Projects\NotificationBox\NotificationBox\bin\Debug\NotificationBox.exe.config
+c:\users\elia0313\documents\visual studio 2015\Projects\NotificationBox\NotificationBox\bin\Debug\NotificationBox.exe
+c:\users\elia0313\documents\visual studio 2015\Projects\NotificationBox\NotificationBox\bin\Debug\NotificationBox.pdb
+c:\users\elia0313\documents\visual studio 2015\Projects\NotificationBox\NotificationBox\obj\Debug\NotificationBox.Form1.resources
+c:\users\elia0313\documents\visual studio 2015\Projects\NotificationBox\NotificationBox\obj\Debug\NotificationBox.Properties.Resources.resources
+c:\users\elia0313\documents\visual studio 2015\Projects\NotificationBox\NotificationBox\obj\Debug\NotificationBox.csproj.GenerateResource.Cache
+c:\users\elia0313\documents\visual studio 2015\Projects\NotificationBox\NotificationBox\obj\Debug\NotificationBox.exe
+c:\users\elia0313\documents\visual studio 2015\Projects\NotificationBox\NotificationBox\obj\Debug\NotificationBox.pdb
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\NotificationBox\NotificationBox\obj\Debug\NotificationBox.csprojResolveAssemblyReference.cache
