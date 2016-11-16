@@ -19,3 +19,14 @@ C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\Notificatio
 C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\Notification Program\Notification Program\obj\Debug\Notification_Program.Form1.resources
 C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\Notification Program\Notification Program\obj\Debug\Notification_Program.Properties.Resources.resources
 C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\Notification Program\Notification Program\obj\Debug\Notification Program.csproj.GenerateResource.Cache
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\master\Notification Program\bin\Debug\Notification Program.exe.config
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\master\Notification Program\obj\Debug\Notification Program.exe
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\master\Notification Program\obj\Debug\Notification Program.pdb
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\master\Notification Program\bin\Debug\Notification Program.exe
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\master\Notification Program\bin\Debug\Notification Program.pdb
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\master\Notification Program\bin\Debug\NAudio.dll
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\master\Notification Program\bin\Debug\NAudio.xml
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\master\Notification Program\obj\Debug\Notification Program.csprojResolveAssemblyReference.cache
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\master\Notification Program\obj\Debug\Notification_Program.Form1.resources
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\master\Notification Program\obj\Debug\Notification_Program.Properties.Resources.resources
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\master\Notification Program\obj\Debug\Notification Program.csproj.GenerateResource.Cache

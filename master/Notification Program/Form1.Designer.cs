@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Set Times", System.Windows.Forms.HorizontalAlignment.Left);
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SetTimeButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -57,6 +58,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(291, 20);
             this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker1.MouseHover += new System.EventHandler(this.dateTimePicker1_MouseHover);
             // 
             // SetTimeButton
             // 
@@ -139,6 +141,7 @@
             this.SecondsTextBox.Size = new System.Drawing.Size(93, 20);
             this.SecondsTextBox.TabIndex = 3;
             this.SecondsTextBox.TextChanged += new System.EventHandler(this.SecondsTextBox_TextChanged);
+            this.SecondsTextBox.MouseHover += new System.EventHandler(this.SecondsTextBox_MouseHover);
             // 
             // MinutesTextBox
             // 
@@ -150,6 +153,7 @@
             this.MinutesTextBox.Size = new System.Drawing.Size(93, 20);
             this.MinutesTextBox.TabIndex = 1;
             this.MinutesTextBox.TextChanged += new System.EventHandler(this.MinutesTextBox_TextChanged);
+            this.MinutesTextBox.MouseHover += new System.EventHandler(this.MinutesTextBox_MouseHover);
             // 
             // HourTextBox
             // 
@@ -161,6 +165,7 @@
             this.HourTextBox.Size = new System.Drawing.Size(93, 20);
             this.HourTextBox.TabIndex = 0;
             this.HourTextBox.TextChanged += new System.EventHandler(this.HourTextBox_TextChanged);
+            this.HourTextBox.MouseHover += new System.EventHandler(this.HourTextBox_MouseHover);
             // 
             // groupBox2
             // 
@@ -179,15 +184,23 @@
             this.MessageTextBox.BackColor = System.Drawing.Color.White;
             this.MessageTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MessageTextBox.Location = new System.Drawing.Point(6, 19);
+            this.MessageTextBox.MaxLength = 192;
             this.MessageTextBox.Name = "MessageTextBox";
             this.MessageTextBox.Size = new System.Drawing.Size(291, 182);
             this.MessageTextBox.TabIndex = 4;
             this.MessageTextBox.Text = "";
+            this.MessageTextBox.TextChanged += new System.EventHandler(this.MessageTextBox_TextChanged);
+            this.MessageTextBox.MouseHover += new System.EventHandler(this.MessageTextBox_MouseHover);
             // 
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.Color.White;
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView1.GridLines = true;
+            listViewGroup1.Header = "Set Times";
+            listViewGroup1.Name = "listViewGroup1";
+            this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup1});
             this.listView1.Location = new System.Drawing.Point(327, 55);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(182, 363);

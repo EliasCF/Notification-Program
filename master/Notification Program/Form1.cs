@@ -7,14 +7,37 @@ using System.Linq;
 
 /*
 TODO:
-    - Make the program able to handle serveral set times, not just one. 
+
+    [-]   Make the program able to handle serveral set times, not just one. 
+
+    [-]   Daily notifier, I can perhaps use args to tell the Notification box if it should look for a set time or a dayly notifier.
+    
+    Finished: 16-11-2016 10:20
+    [✓]  The current max count of characters that can be in NotificationBox is 144.
+          I need to make it detect if there are more than 144 characters and then adjust the height of the window accordingly.
+          But of course there should still be a max amount of characters
+
+    [-]   Fix the list, potentialy use another kind of list?
+
+    [-]   Change the colors of the GUI into something that doesn't blend as well into the colors of what is behind it
+
+    [-]   Make a settings option that allows you to changer the GUI color into other colors. 
+          However the amounts of colors you can chose from should be restricted to a collections of premate themes.
+
+    [-]   Add async??? Maybe??? I don't know. Maybe??? 
+          "Add it!!!" -Henrik
+
+    [-]   If I think it is needed, I could expand the maximum amount allowed amount of characters even further.
+
+    Finished: 16-11-2016 11:03
+    [✓]  Add ToolTip to the different components, to make their functions more obvious.
 */
 
 namespace Notification_Program
 {
     public partial class Form1 : Form
     {
-        //Set paths to the required programs
+        //Set paths to the requiresd programs
         public static string CurrentDir = Environment.CurrentDirectory;
         public static readonly string TimeXmlPath = CurrentDir + @"\Time.xml";
         public static readonly string ServiceTestPath = CurrentDir + @"\Service Test.exe";
@@ -22,12 +45,12 @@ namespace Notification_Program
         public Form1()
         {
             ValidatePaths(); //Make sure that the required files are in the CurrentDirectory before any components are loaded
-
+            
             InitializeComponent();
 
             dateTimePicker1.Format = DateTimePickerFormat.Custom; //Custom formating of the DateTimePicker
             dateTimePicker1.CustomFormat = "dd-MM-yyyy"; //Set format to days/months/year
-
+            
             ExitButton.FlatAppearance.BorderColor = Color.Black; //Makes the exit button border Black
 
             if (File.Exists(TimeXmlPath)) //Make sure Time.xml exists
@@ -100,7 +123,9 @@ namespace Notification_Program
 
                 Clear(); //Clear Text Boxses
 
-                AddToListView(string.Join(" ", dateString)); //Add the set date to listView
+                String[] StringDate = { dateString[0], dateString[1], dateString[2], dateString[3] };
+
+                AddToListView(string.Join(" ", StringDate)); //Add the set date to listView
             }
         }
 
@@ -110,10 +135,12 @@ namespace Notification_Program
             listView1.Items.Add(item); //Add a date to the listview
         }
 
+        #region Is Box Empty???
+
         public bool IsBoxEmpty()
         {
             //Check for epmty textboxes
-            if(HourTextBox.Text.Equals("") || MinutesTextBox.Text.Equals("") || SecondsTextBox.Text.Equals(""))
+            if (HourTextBox.Text.Equals("") || MinutesTextBox.Text.Equals("") || SecondsTextBox.Text.Equals(""))
             {
                 if (HourTextBox.Text.Equals("") && MinutesTextBox.Text.Equals("") && SecondsTextBox.Text.Equals(""))
                 {
@@ -123,23 +150,23 @@ namespace Notification_Program
                 {
                     MessageBox.Show("The Hours and Mintues text boxs are empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if(HourTextBox.Text.Equals("") && SecondsTextBox.Text.Equals(""))
+                else if (HourTextBox.Text.Equals("") && SecondsTextBox.Text.Equals(""))
                 {
                     MessageBox.Show("The Hours and Seconds text boxs are empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if(MinutesTextBox.Text.Equals("") && SecondsTextBox.Text.Equals(""))
+                else if (MinutesTextBox.Text.Equals("") && SecondsTextBox.Text.Equals(""))
                 {
                     MessageBox.Show("The Minutes and Seconds text boxs are empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if(HourTextBox.Text.Equals(""))
+                else if (HourTextBox.Text.Equals(""))
                 {
                     MessageBox.Show("The Hours text box is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } 
+                }
                 else if (MinutesTextBox.Text.Equals(""))
                 {
                     MessageBox.Show("The Minutes text box is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if(SecondsTextBox.Text.Equals(""))
+                else if (SecondsTextBox.Text.Equals(""))
                 {
                     MessageBox.Show("The Seconds text box is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -148,9 +175,10 @@ namespace Notification_Program
             }
 
             return false; //There are no empty box(es)
-        }
+        } 
+        #endregion
 
-        //Clear all the text boxes when called
+        //Clears all the text TextBoxes when called
         public void Clear()
         {
             HourTextBox.Text = String.Empty;
@@ -225,35 +253,17 @@ namespace Notification_Program
         }
         #endregion
 
-        private void ExitButton_Click(object sender, EventArgs e)
+        private void MessageTextBox_TextChanged(object sender, EventArgs e)
         {
-            Environment.Exit(0);
-        }
-
-        //Makes the form draggable
-        protected override void WndProc(ref Message m)
-        {
-            switch (m.Msg)
+            //This shows a MessageBox when MessageTextBox has reached it's amount of characters it is limited to (192)
+            if (MessageTextBox.Text.Length == MessageTextBox.MaxLength)
             {
-                case 0x84:
-                    base.WndProc(ref m);
-                    if ((int)m.Result == 0x1)
-                        m.Result = (IntPtr)0x2;
-                    return;
+                MessageBox.Show("You have reached the limit of 192 characters", "Limit reached", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
-            base.WndProc(ref m);
         }
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.White, ButtonBorderStyle.Solid); //Draw border on Form1
+        #region Coloring of buttons
 
-            //Draw white line on Form1
-            Pen pen = new Pen(Color.White);
-            e.Graphics.DrawLine(pen, Width, 43, 1 , 43);
-        }
-        
         //
         //A bunch of color changes according to certain mouse events
         //
@@ -305,6 +315,72 @@ namespace Notification_Program
         private void MinimizeButton_MouseDown(object sender, MouseEventArgs e)
         {
             MinimizeButton.BackColor = Color.Gray;
+        }
+
+        #endregion
+
+        #region MouseHover ToolTip events
+
+        ToolTip InfoBox = new ToolTip();
+        private void MessageTextBox_MouseHover(object sender, EventArgs e)
+        {
+            InfoBox.AutoPopDelay = 1000;
+            InfoBox.Show("Write your message here", MessageTextBox, 3000);
+        }
+
+        private void HourTextBox_MouseHover(object sender, EventArgs e)
+        {
+            InfoBox.AutoPopDelay = 700;
+            InfoBox.Show("Write the hour you want to set the time to here", HourTextBox, 5000);
+        }
+
+        private void MinutesTextBox_MouseHover(object sender, EventArgs e)
+        {
+            InfoBox.AutoPopDelay = 700;
+            InfoBox.Show("Write the minutes you want to set the time to here", MinutesTextBox, 5000);
+        }
+
+        private void SecondsTextBox_MouseHover(object sender, EventArgs e)
+        {
+            InfoBox.AutoPopDelay = 700;
+            InfoBox.Show("Write the seconds you want to set the time to here", SecondsTextBox, 5000);
+        }
+
+        private void dateTimePicker1_MouseHover(object sender, EventArgs e)
+        {
+            InfoBox.AutoPopDelay = 700;
+            InfoBox.Show("Pick a date here", dateTimePicker1, 5000);
+        }
+        #endregion
+
+        //Painting on Form1
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.White, ButtonBorderStyle.Solid); //Draw border on Form1
+
+            //Draw white line on Form1
+            Pen pen = new Pen(Color.White);
+            e.Graphics.DrawLine(pen, Width, 43, 1, 43);
+        }
+
+        //Makes the form draggable
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+
+            base.WndProc(ref m);
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0); //Godspeed Notification Program, may your soul rest in peace.
         }
     }
 }

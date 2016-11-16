@@ -7,3 +7,12 @@ c:\users\elia0313\documents\visual studio 2015\Projects\NotificationBox\Notifica
 c:\users\elia0313\documents\visual studio 2015\Projects\NotificationBox\NotificationBox\obj\Debug\NotificationBox.exe
 c:\users\elia0313\documents\visual studio 2015\Projects\NotificationBox\NotificationBox\obj\Debug\NotificationBox.pdb
 C:\Users\elia0313\Documents\Visual Studio 2015\Projects\NotificationBox\NotificationBox\obj\Debug\NotificationBox.csprojResolveAssemblyReference.cache
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\NotificationBox\NotificationBox\bin\Debug\NotificationBox.exe.config
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\NotificationBox\NotificationBox\obj\Debug\NotificationBox.exe
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\NotificationBox\NotificationBox\obj\Debug\NotificationBox.pdb
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\NotificationBox\NotificationBox\bin\Debug\NotificationBox.exe
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\NotificationBox\NotificationBox\bin\Debug\NotificationBox.pdb
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\NotificationBox\NotificationBox\obj\Debug\NotificationBox.csprojResolveAssemblyReference.cache
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\NotificationBox\NotificationBox\obj\Debug\NotificationBox.Form1.resources
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\NotificationBox\NotificationBox\obj\Debug\NotificationBox.Properties.Resources.resources
+C:\Users\elia0313\Documents\Visual Studio 2015\Projects\Notification\NotificationBox\NotificationBox\obj\Debug\NotificationBox.csproj.GenerateResource.Cache

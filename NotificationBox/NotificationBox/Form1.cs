@@ -35,6 +35,20 @@ namespace NotificationBox
             button1.FlatAppearance.BorderColor = Color.Black; //Makes the exit button border Black
 
             String[] Values = LoadXml();
+
+            //Check if Values[1].Length() more than 144 characters
+            if(Values[1].Length > 144 && Values[1].Length <= 168 )
+            {
+                // + 20
+                Height = 268; //Form1 height 263
+                label1.Height = 172; //167
+            } 
+            else if(Values[1].Length > 168 && Values[1].Length <= 192)
+            {
+                Height = 288; //Form1 height
+                label1.Height = 192;
+            }
+
             label2.Text = Values[0]; //Put the set time from Time.xml into label2
             label1.Text = Values[1]; //Put the message from Time.xml into label1
 
